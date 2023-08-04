@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Vue - Sistema</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <h1>
+            {{bemVindo()}}
+        </h1> -->
+        <!-- <h1>
+            Sistema didático da academia 
+        </h1>
+
+        <h4>Status do usuário: {{statusLogin}} </h4> -->
+
+        <!-- <button v-on:click="entrar()">Entrar</button> -->
+        <!-- <button @click="entrar(peso,nome)">Entrar</button> -->
+
+        <!-- <a v-bind:href="link" target="_blank">Link para site externo</a> -->
+        <!-- <a :href="link" target="_blank">Link para site externo</a> -->
+
+        <h2 v-once>{{nome}} </h2>
+        <h2>{{mudarNome()}}</h2>
+    </div>
+
+    <script>
+
+        const {createApp : MeuSistema} = Vue;
+
+        MeuSistema({
+            data(){
+                return{
+                    nome: 'Miguelão'
+                    // link: 'https://www.youtube.com/'
+                    // statusLogin: 'Não logado',
+                    // nome: 'Miguelão',
+                    // peso: 75
+                }
+            },
+            methods:{
+                // bemVindo(){
+                //     return 'Olá ' + this.nome+', seja bem-vindo!';
+                // }
+
+                // entrar(peso,nome){
+                //     return this.statusLogin = 'Olá '+ nome + ', seja bem vindo! '+peso
+                // }
+
+                mudarNome(){
+                    return this.nome = 'Gertrudes'
+                }
+
+            }
+        }).mount('#app')
+
+    </script>
+</body>
+</html>
